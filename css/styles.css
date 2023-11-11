@@ -67,6 +67,8 @@ address {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -115,7 +117,32 @@ ul {
 
 .link:hover {
   color: var(--color-brand-light);
-  font-weight: 600;
+}
+
+/* Header flex */
+
+.header-container {
+  background-color: lightgray;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /* Hero section */
@@ -138,11 +165,19 @@ ul {
 
 /* Advantages section */
 
-.advantages-list {
-  color: var(--color-primary-light);
+.advantages-section {
+  padding: 16px 0;
   background-color: var(--color-brand-light);
 }
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
 .advantages-items {
+  color: var(--color-primary-light);
   font-size: 20px;
   font-weight: 300;
 }
@@ -158,6 +193,16 @@ ul {
 }
 /* Traditions section */
 
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.traditions-content {
+  max-width: 710px;
+}
+
 .traditions-title {
   margin-bottom: 42px;
 }
@@ -170,8 +215,13 @@ ul {
   color: var(--color-brand-light);
   font-weight: 600;
 }
+
 .traditions-text .uppercase {
   text-transform: uppercase;
+}
+
+.traditions-text.limited {
+  max-width: 340px;
 }
 
 /* Shefs section */
@@ -187,6 +237,18 @@ ul {
 }
 
 /* Format's options */
+
+.formats-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.format-card {
+  border-radius: 16px;
+  border: 1px solid lightgrey;
+  padding: 24px;
+}
 
 .format-title {
   margin-bottom: 80px;
