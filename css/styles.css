@@ -40,7 +40,9 @@
 }
 
 /* Base */
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -62,6 +64,10 @@ h5,
 h6,
 p {
   margin-top: 0;
+}
+
+a {
+  display: inline-block;
 }
 
 address {
@@ -262,7 +268,35 @@ ul {
     -16px 16px 0 2px var(--color-secondary-dark);
 }
 
+.chefs-list {
+  display: flex;
+  gap: 40px 30px;
+  flex-wrap: wrap;
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
+.chef-text p {
+  margin-bottom: 24px;
+}
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Format's options */
+
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
 
 .formats-list {
   display: flex;
@@ -314,6 +348,7 @@ ul {
   border: 1px solid var(--color-primary-dark);
   fill: var(--color-primary-dark);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .carousel-button:hover {
@@ -323,6 +358,10 @@ ul {
 
 /* Contact section */
 
+.contacts {
+  padding-bottom: 96px;
+}
+
 .contact-title {
   margin-bottom: 16px;
 }
@@ -331,10 +370,23 @@ ul {
   color: var(--color-brand-dark);
 }
 
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
+.contact-map {
+  display: flex;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+}
+
 /* Footer */
 .footer {
   background-image: url(../images/footer.png);
   background-color: var(--color-primary-dark);
+  padding: 32px 0;
 }
 
 .adress-link {
@@ -353,4 +405,26 @@ ul {
 .adress-copyright {
   font-size: 14px;
   color: #a18268;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-adress {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-link {
+  flex-grow: 1;
+}
+
+.adress-list,
+.adress-info {
+  flex-grow: 1;
 }
