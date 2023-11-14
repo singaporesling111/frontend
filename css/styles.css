@@ -245,15 +245,25 @@ ul {
 
 .chefs-title {
   margin: 0 auto 80px;
-  max-width: 520px;
+  position: relative;
 }
 
 .chefs-title::before,
 .chefs-title::after {
+  bottom: 24px;
+  position: absolute;
   display: block;
-  width: 352px;
+  width: 360px;
   border: 2px solid var(--color-brand-def);
   content: '';
+}
+
+.chefs-title::before {
+  left: 0;
+}
+
+.chefs-title::after {
+  right: 0px;
 }
 
 .shefs-title {
@@ -384,9 +394,33 @@ ul {
 
 /* Footer */
 .footer {
+  position: relative;
   background-image: url(../images/footer.png);
   background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 32px 0;
+}
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  bottom: 0;
+}
+
+.footer::before {
+  background-image: url(../images/chleb.png);
+  width: 180px;
+  height: 120px;
+}
+.footer::after {
+  background-image: url(../images/chleb2.png);
+  width: 380px;
+  height: 190px;
+  right: 0;
 }
 
 .adress-link {
@@ -427,4 +461,38 @@ ul {
 .adress-list,
 .adress-info {
   flex-grow: 1;
+}
+
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 880px;
+  height: 880px;
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  right: 40px;
+  top: 40px;
 }
