@@ -508,6 +508,7 @@ ul {
 }
 
 .modal {
+  padding: 128px;
   position: relative;
   width: 100%;
   max-width: 880px;
@@ -515,10 +516,65 @@ ul {
   max-height: 880px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
+  overflow: auto;
 }
 
 .modal-btn-close {
   position: absolute;
   right: 40px;
   top: 40px;
+}
+
+/* Form */
+
+.form-label {
+  display: block;
+}
+
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary-dark);
+  background-color: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-field {
+  margin-bottom: 32px;
+}
+
+.form-button {
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.form-terms {
+  min-width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
 }
