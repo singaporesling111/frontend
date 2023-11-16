@@ -203,6 +203,7 @@
                     >Iм'я</label
                   >
                   <input
+                    required
                     class="form-input"
                     type="text"
                     name="user-name"
@@ -327,7 +328,7 @@
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-        <form name="contact-form" autocomplete="off" novalidate>
+        <form name="contact-form" autocomplete="off">
           <div class="form-field">
             <label class="form-label visually-hidden" for="user-name"
               >Iм'я</label
@@ -338,6 +339,9 @@
               name="user-name"
               id="user-name"
               placeholder="Iм'я"
+              required
+              minlength="2"
+              maxlength="20"
             />
           </div>
 
@@ -351,6 +355,8 @@
               name="user-tel"
               id="user-tel"
               placeholder="Телефон"
+              required
+              pattern="^\+[0-9]{12}"
             />
           </div>
 
@@ -364,6 +370,7 @@
               name="user-mail"
               id="user-mail"
               placeholder="Електронна почта"
+              required
             />
           </div>
 
