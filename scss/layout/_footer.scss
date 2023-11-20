@@ -1,0 +1,69 @@
+.footer {
+  position: relative;
+  background-image: url(../images/footer.png);
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 32px 0;
+}
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  content: '';
+  background-repeat: no-repeat;
+  bottom: 0;
+}
+
+.footer::before {
+  background-image: url(../images/chleb.png);
+  width: 180px;
+  height: 120px;
+}
+.footer::after {
+  background-image: url(../images/chleb2.png);
+  width: 380px;
+  height: 190px;
+  right: 0;
+}
+
+.adress-link {
+  color: var(--color-primary-light);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+.adress-link:hover {
+  color: var(--color-brand-normal);
+}
+
+.adress-icon {
+  fill: var(--color-primary-light);
+}
+.adress-copyright {
+  font-size: 14px;
+  color: #a18268;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-adress {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-link {
+  flex-grow: 1;
+}
+
+.adress-list,
+.adress-info {
+  flex-grow: 1;
+}
